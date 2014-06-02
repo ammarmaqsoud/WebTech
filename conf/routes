@@ -1,0 +1,8 @@
+# Home page
+GET     /                           controllers.Application.index()
+
+# Calc action
+GET     /hello                      controllers.Application.sayHello()
+
+
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

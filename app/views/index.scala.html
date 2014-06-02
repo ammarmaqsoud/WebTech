@@ -1,0 +1,33 @@
+@(helloForm: Form[Application.Hello])
+
+@import helper._
+
+@main(title = "The 'Square Equation Solving' application") {
+    
+    <h1> a.x^2 +b.x+ c= 0  </h1>
+    
+    @form(action = routes.Application.sayHello, args = 'id -> "helloform") {
+       
+        
+                @inputText(
+            field = helloForm("a"),
+            args = '_label -> "What's (a) value?", 'size -> 3, 'placeholder -> 16
+        )
+        
+                @inputText(
+            field = helloForm("b"),
+            args = '_label -> "What's (b) value?", 'size -> 3, 'placeholder -> 8
+        )
+        
+                @inputText(
+            field = helloForm("c"),
+            args = '_label -> "What's (c) value?", 'size -> 3, 'placeholder -> 1
+        )
+        
+        <p class="buttons">
+            <input type="submit">
+        <p>
+        
+    }
+    
+}

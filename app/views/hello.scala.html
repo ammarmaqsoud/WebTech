@@ -1,0 +1,15 @@
+@(result: String)
+
+@main("Here is the result:") {
+    
+    <ul >
+       @if(result != "") { <li>  @result </li> } else { <li>No Solutions founded! </li> } 
+    </ul>
+    
+    <p class="buttons">
+        <a href="@routes.Application.index">Back to the form</a>
+    </p>
+    
+}
+
+
